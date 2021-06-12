@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //var abs=function(e) {  这种写法也行
+      function abs(e) {
+        if (typeof e != "number") {
+          throw "not a number";
+        }
+        for (var i = 0; i < arguments.length; i++) {
+          console.log(arguments[i]);
+          //js的方法可以传入多个参数，虽然只定义了一个
+          //arguments可以拿到所有的参数，并把它们作为一个数组
+          //rest可以获得除了定义的参数以外的所有参数
+        }
+        if (e > 10) {
+          return e;
+        } else {
+          return -e; //即使没有return也会返回 undefine
+        }
+      }
+
+      function arr(a, b, ...rest) {
+        console.log(rest);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

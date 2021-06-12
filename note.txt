@@ -1,0 +1,27 @@
+NaN //not a number
+
+布尔值 true false
+逻辑运算  && || ！
+比较运算符 =   ==等于（类型不一样，值一样，也会判断为true）
+===绝对等于（类型一样，值一样，才会判断为true）
+NaN与所有数值，包括自己都不相等
+
+数组  一系列相同的对象
+
+'use strict'; 严格检查模式，预防javascript的随意性导致一些问题
+
+push() pop() 尾部
+push:压入尾部 pop：弹出尾部的一个元素
+
+shift() unshift()
+unshift：压入到头部 shift:弹出头部的一个元素
+
+sort()排序  reverse()元素反转
+
+concat() 元素连接
+
+join() 打印拼接数组，使用特定的字符串连接
+
+js对象 var person={name="" age= }
+动态的添加删除属性
+

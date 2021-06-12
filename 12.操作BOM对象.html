@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //BOM：浏览器对象模型
+
+      //window 代表 浏览器窗口
+      //window.alert(1)  window.innerHeight
+
+      //Navigator 封装了浏览器的信息，不建议使用
+
+      //screen  screen.width  screen.height 获取屏幕尺寸
+
+      //location(重要) 代表当前页面的url信息
+      //host:"www.baidu.com"
+      //href:"https://www.baidu.com//"
+      //protocol:"https:"
+      //reload:f reload()
+      //assign:f assign()  网页重新定向
+      //location.assign('https://www.baidu.com//')
+
+      //DOM
+      //document 代表当前的页面，HTML DOM文档树
+      //document.title("xxx")网页标签名
+
+      //history  代表浏览器的历史记录
+      //history.back()后退  history.forward()前进
+    </script>
+  </head>
+  <body>
+    <div>
+      <dl>
+        <dt id="java">java</dt>
+        <dd>javaME</dd>
+        <dd>javaSE</dd>
+        <dd>javaEE</dd>
+      </dl>
+    </div>
+    <script>
+      var dl = document.getElementById("java");
+      //获取具体的文档节点，在body里的script
+      //document.cookie可以获取cookie 不安全 会被劫持
+      //<script src='aa.js'>
+      //恶意人员，获取你的cookie上传到他的服务器
+      //服务器端可以设置 cookie：httpOnly
+    </script>
+  </body>
+</html>

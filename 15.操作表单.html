@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="form1" action="post">
+      <span>用户名：</span><input type="text" id="username" required />
+      <p>
+        <span>性别：</span>
+        <input type="radio" name="sex" value="boy" id="boy" />男
+        <input type="radio" name="sex" value="girl" id="girl" />女
+        <br />
+        <input type="button" value="获取" onclick="getRadioValue()" />
+      </p>
+    </form>
+    <script>
+      var input_text = document.getElementById("username");
+      //input_text.value获得输入的值
+      var Obj = document.getElementsByName("sex");
+      function getRadioValue() {
+        for (var i = 0; i < Obj.length; i++) {
+          if (Obj[i].checked) {
+            str = Obj[i].value;
+          }
+        }
+        alert(str);
+        return str; //return是方法的最后一行！！
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //在JavaScript里一切皆对象，任何js支持的类型都可以转换成json来表示
+      //对象都用{}
+      //数组用[]
+      //键值对 key:value
+      var user = {
+        name: "hito",
+        age: 3,
+        sex: "男",
+      };
+      //对象user转换为json字符串
+      var jsonUser = JSON.stringify(user);
+      console.log(jsonUser);
+      //json转换为对象
+      var obj = JSON.parse('{ "name": "hito", "age": 10, "sex": "男"}');
+      console.log(obj);
+    </script>
+  </head>
+  <body></body>
+</html>

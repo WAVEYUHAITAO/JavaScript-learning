@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      "use strict";
+      function qj() {
+        var x = 1;
+
+        function qj2() {
+          var x = 2;
+          console.log("内部" + x);
+        }
+        console.log("外部" + x);
+        qj2();
+
+        window.alert(x);
+      }
+      //x = x + 1;   这个x和方法里面的x不是一个作用域
+      //javasc实际上只有一个全局作用域，任何变量（函数也可以视为变量），假设没有在函数作用
+      //范围内找到，就会想外查找，如果在全局作用域都没有找到，报错
+
+      //唯一全局变量
+      var hitoapp = {};
+      //定义全局变量
+      hitoapp.name = "hito";
+      hitoapp.add = function (a, b) {
+        return a + b;
+      };
+
+      function aaa() {
+        for (let i = 0; i < 100; i++) {
+          console.log(i);
+        }
+        console.log(i + 1); //问题？ var定义的i在循环外（作用域外）还能使用,这里将for循环里i改为let定义
+      }
+      //常量const不允许赋值更改
+      const PI = "3.14";
+      console.log(PI);
+    </script>
+  </head>
+  <body></body>
+</html>

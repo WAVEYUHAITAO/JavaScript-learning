@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="father">
+      <h1>标题1</h1>
+      <p id="p1">p1</p>
+      <p class="p2">p2</p>
+    </div>
+    <div id="test"></div>
+    <script>
+      // 核心
+      // DOM 文档对象模型
+      // 浏览器网页就是一个Dom树型结构
+      // 更新：更新Dom节点
+      // 遍历Dom节点：得到Dom节点
+      // 删除：删除一个Dom节点
+      // 添加：添加一个新的节点
+      // 要操作一个Dom节点，就必须获得一个Dom节点
+
+      //对应css的选择器
+      var father = document.getElementById("father"); //获得节点
+      var h1 = document.getElementsByTagName("h1");
+      var p1 = document.getElementById("p1");
+      var p2 = document.getElementsByClassName("p2");
+      var test = document.getElementById("test");
+      test.innerText = "123"; //设置这个id 里面的内容 修改文本值
+      //test.innerHTML = "<a href='https://www.baidu.com'>百度</a>"; //innerHTML可以解析HTML语法
+      test.style.color = "red"; //操作文本
+      var children = father.children; //获取父节点下的所有子节点
+      //father.firstChild   father.lastChild
+
+      //删除节点
+      //先获取父级节点，再删除自己
+      father.removeChild(p1); //通过父节点删除子节点
+      //注意删除节点的时候，father.children里的元素是动态变化的，删了一个，后面就前移一个
+    </script>
+  </body>
+</html>

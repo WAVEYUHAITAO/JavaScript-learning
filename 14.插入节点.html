@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="js">JavaScript</p>
+    <div id="list">
+      <p id="se">JavaSE</p>
+      <p id="ee">JavaEE</p>
+      <p id="me">JavaME</p>
+    </div>
+    <script>
+      // 我们获得了某个Dom节点，假设这个dom节点是空的，我们通过innerHTML就可以增加一个
+      // 元素了，但是这个DOM节点已经存在元素了，我们就不可以了，会覆盖原来的元素
+
+      //就要使用追加
+      var js = document.getElementById("js");
+      var se = document.getElementById("se");
+      var list = document.getElementById("list");
+      se.append(js); //把一个节点移动到当前节点里面 ，节点在原位置消失
+
+      //通过js创建一个新的节点
+      var newP = document.createElement("p"); //创建一个p标签
+      newP.setAttribute("class", "newx");
+      newP.id = "newP";
+      newP.innerText = "hello P";
+      list.append(newP);
+
+      var myScript = document.createElement("script"); //可以直接创建javascript标签，来创建p标签
+      myScript.setAttribute("type", "text/javascript");
+      myScript.innerText =
+        "var newP1 = document.createElement('p'); newP1.id='newP1'; newP1.innerText='newP1'; list.append(newP1); ";
+      list.append(myScript);
+
+      list.insertBefore(js, se); //将js插到se之前，list包裹这俩节点
+    </script>
+  </body>
+</html>

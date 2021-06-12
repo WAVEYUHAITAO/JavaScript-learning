@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      "use strict";
+      var map = new Map([
+        ["tom", 100],
+        ["jack", 90],
+        ["hito", 80],
+      ]);
+      let name = map.get("tom");
+      map.set("admin", 123456);
+      console.log(name);
+
+      var set = new Set([2, 3, 1, 1, 1, 1, 1]); //set可以去除重复元素
+      set.delete(2);
+
+      for (let x of set) {
+        //集合只能用of，in不行
+        console.log(x);
+      }
+      for (let x of map) {
+        //map只能用of，in不行
+        console.log(x);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

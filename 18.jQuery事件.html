@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+      #divMove {
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 获取鼠标当前坐标 -->
+    mouse:<span id="mousemove"></span>
+    <div id="divMove">这里移动鼠标试试</div>
+    <script>
+      //当网页元素加载完毕之后，响应事件
+      //$(document).ready(function () {});//下面的是简写
+      $(function () {
+        $("#divMove").mousemove(function (e) {
+          $("#mousemove").text("x: " + e.pageX + "y: " + e.pageY);
+        });
+      });
+    </script>
+  </body>
+</html>

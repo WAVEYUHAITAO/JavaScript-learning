@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      "use strict";
+
+      console.log("a");
+      console.log("a");
+      console.log("\u4e2d"); //中的UNICODE编码 4e2d
+
+      var msg = `nihao
+                djk
+                dfjk`; //长字符串，在tab键上面
+
+      let name = "hito";
+      let age = 3;
+      let msg1 = `你好啊，${name}`; //只有使用``包裹才能用${}获取到值
+      var arr = [10, 1, 2, 3, 4, 5, 6];
+      console.log(msg1);
+
+      while (age < 100) {
+        age++;
+        console.log(age);
+      }
+      arr.name = "213";
+      arr.forEach(function (e) {
+        console.log(e);
+      });
+
+      for (let x in arr) {
+        // let x in arr ,x是角标 ， let x of arr，x是arr里的值
+        //数组 of,in都能遍历
+        //这里x是arr的索引
+        console.log(x);
+      }
+      for (let x of arr) {
+        // let x in arr ,x是角标 ， let x of arr，x是arr里的值
+        //数组 of,in都能遍历
+        //这里x是arr的索引
+        console.log(x);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

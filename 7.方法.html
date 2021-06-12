@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getSex() {
+        return this.sexy;
+      }
+      //方法就是把函数放在对象的里面，对象只有两个东西：属性和方法
+      var hito = {
+        name: "hito",
+        birth: 2020,
+        sexy: "boy",
+        age: function () {
+          var now = new Date().getFullYear();
+          return now - this.birth; //this指向这个对象
+        },
+        sex: getSex,
+      };
+      getSex.apply(hito, []); //apply可以指定方法this的指向
+    </script>
+  </head>
+  <body></body>
+</html>

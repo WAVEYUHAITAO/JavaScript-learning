@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  </head>
+  <body>
+    <ul id="test-ul">
+      <li class="js">javascript</li>
+      <li name="python">python</li>
+      <li id="jQuery">jQuery</li>
+      <li id="show">show</li>
+    </ul>
+    <script>
+      //$(selector).action()
+      $("#test-ul li[name=python]").text(); //text里没有东西就是获得值，有东西就是设置
+      $("#test-ul li[name=python]").html(); //html里没有东西就是获得值，有东西就是设置，html可以解析html代码
+      $("#test-ul li[name=python]").css("color", "red");
+      $("li[id=jQuery]").css({ color: "red", background: "blue" });
+      $("li[id=show]").hide(); //隐藏元素
+      $("li[id=show]").show(); //显示元素
+    </script>
+  </body>
+</html>
