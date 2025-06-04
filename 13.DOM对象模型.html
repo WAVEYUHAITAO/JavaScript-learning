@@ -29,15 +29,15 @@
       var p1 = document.getElementById("p1");
       var p2 = document.getElementsByClassName("p2");
       var test = document.getElementById("test");
-      test.innerText = "123"; //设置这个id 里面的内容 修改文本值
-      //test.innerHTML = "<a href='https://www.baidu.com'>百度</a>"; //innerHTML可以解析HTML语法
-      test.style.color = "red"; //操作文本
+      // test.innerText = "123"; //设置这个id 里面的内容 修改文本值
+      test.innerHTML = "<a href='https://www.baidu.com' target='_blank' style='color:red'>百度</a>"; //innerHTML可以解析HTML语法
+      // test.style.color = "red"; //操作文本颜色
       var children = father.children; //获取父节点下的所有子节点
       //father.firstChild   father.lastChild
 
       //删除节点
       //先获取父级节点，再删除自己
-      father.removeChild(p1); //通过父节点删除子节点
+      father.removeChild(h1[0]); //通过父节点删除子节点
       //注意删除节点的时候，father.children里的元素是动态变化的，删了一个，后面就前移一个
     </script>
   </body>

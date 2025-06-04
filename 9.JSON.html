@@ -19,8 +19,11 @@
       var jsonUser = JSON.stringify(user);
       console.log(jsonUser);
       //json转换为对象
-      var obj = JSON.parse('{ "name": "hito", "age": 10, "sex": "男"}');
+      // var obj = JSON.parse('{ "name": "hito", "age": 10, "sex": "男"}');
+      var obj = JSON.parse(jsonUser);
       console.log(obj);
+      console.log(user);
+      console.log(obj == user); // false, 因为obj是一个新对象
     </script>
   </head>
   <body></body>

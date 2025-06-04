@@ -16,8 +16,8 @@
     </ul>
     <script>
       //$(selector).action()
-      $("#test-ul li[name=python]").text(); //text里没有东西就是获得值，有东西就是设置
-      $("#test-ul li[name=python]").html(); //html里没有东西就是获得值，有东西就是设置，html可以解析html代码
+      console.log($("#test-ul li[name=python]").text()); //text里没有东西就是获得值，有东西就是设置
+      console.log($("#test-ul li[name=python]").html()); //html里没有东西就是获得值，有东西就是设置，html可以解析html代码
       $("#test-ul li[name=python]").css("color", "red");
       $("li[id=jQuery]").css({ color: "red", background: "blue" });
       $("li[id=show]").hide(); //隐藏元素

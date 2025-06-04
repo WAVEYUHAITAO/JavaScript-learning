@@ -19,6 +19,16 @@
       var set = new Set([2, 3, 1, 1, 1, 1, 1]); //set可以去除重复元素
       set.delete(2);
 
+      var arr = [1, 2, 3, 4, 5, 6];
+      for (let x in arr) {
+        //数组的角标
+        console.log(x + ":" + arr[x]);
+      }
+      for (let x of arr) {
+        //数组的值
+        console.log(x);
+      }
+
       for (let x of set) {
         //集合只能用of，in不行
         console.log(x);
@@ -27,6 +37,7 @@
         //map只能用of，in不行
         console.log(x);
       }
+      console.log(map.has("tom")); //判断是否有这个键
     </script>
   </head>
   <body></body>

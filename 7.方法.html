@@ -7,6 +7,7 @@
     <title>Document</title>
     <script>
       function getSex() {
+        console.log(this.name); //this指向调用这个方法的对象
         return this.sexy;
       }
       //方法就是把函数放在对象的里面，对象只有两个东西：属性和方法
@@ -16,11 +17,15 @@
         sexy: "boy",
         age: function () {
           var now = new Date().getFullYear();
+          console.log(now-this.birth); //this指向这个对象
           return now - this.birth; //this指向这个对象
         },
         sex: getSex,
       };
-      getSex.apply(hito, []); //apply可以指定方法this的指向
+      // getSex.apply(hito); //apply可以指定方法this的指向
+      console.log(hito.birth);
+      // hito.sex();
+      getSex.apply(hito)
     </script>
   </head>
   <body></body>

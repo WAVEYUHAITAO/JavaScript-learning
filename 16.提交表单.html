@@ -18,9 +18,10 @@
       </p>
       <p>
         <span>密码：</span
-        ><input type="password" id="input-password" name="password" />
+        ><input type="password" id="input-password"/>
       </p>
-      <input type="hidden" id="md5-password" name="md5-password" />
+    
+      <input type="hidden" name="password" id="md5-password" />
       <p>
         <button type="submit" onclick="aaa()">提交</button>
       </p>
@@ -33,9 +34,8 @@
           console.log(pwd.value);
           //MD5 算法
           md5pwd.value = md5(pwd.value); //因为MD5加密密码框会出现一个字符变长的特效，这里新建一个隐藏的输入框，让加密动作和表单显示都由它来完成，就不会有变长的动画了
-          //pwd.value = md5(pwd.value);
-
-          console.log(pwd.value);
+          pwd.value = md5(pwd.value); //将密码框的值也设置为MD5加密后的值
+          console.log(md5pwd.value);
         }
       </script>
     </form>

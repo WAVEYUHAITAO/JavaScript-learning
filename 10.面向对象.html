@@ -19,6 +19,8 @@
         name: "hito",
       };
       hito.__proto__ = user; //设置hito的原型为user ，相当于java的继承
+      user.run();
+      hito.run(); //hito可以访问user的run方法
     </script>
   </head>
   <body></body>

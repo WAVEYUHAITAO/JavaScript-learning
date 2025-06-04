@@ -22,20 +22,24 @@
       var arr = [10, 1, 2, 3, 4, 5, 6];
       console.log(msg1);
 
-      while (age < 100) {
-        age++;
-        console.log(age);
-      }
+      // while (age < 100) {
+      //   age++;
+      //   console.log(age);
+      // }
       arr.name = "213";
       arr.forEach(function (e) {
         console.log(e);
       });
+      for (let x=0; x<100; x++) {
+        //for循环
+        console.log(x);
+      } 
 
       for (let x in arr) {
         // let x in arr ,x是角标 ， let x of arr，x是arr里的值
         //数组 of,in都能遍历
         //这里x是arr的索引
-        console.log(x);
+        console.log(x + ":" + arr[x]);
       }
       for (let x of arr) {
         // let x in arr ,x是角标 ， let x of arr，x是arr里的值
